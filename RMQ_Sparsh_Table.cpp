@@ -36,6 +36,6 @@ int main()
     //   RMQ<int> m1(a);
 
     // query
-    //  RMQ<int> m1(a);
+    //  m2.query(left,right)   return min of between left and right
     return 0;
 }
