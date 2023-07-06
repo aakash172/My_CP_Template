@@ -3,6 +3,8 @@
  *           created: 2023-07-04    18:57:40
  **/
 #include <bits/stdc++.h>
+using namespace std;
+
 
 template <typename T>
 struct RMQ
@@ -27,7 +29,7 @@ struct RMQ
     }
 };
 
-using namespace std;
+
 
 int main()
 {
@@ -36,6 +38,6 @@ int main()
     //   RMQ<int> m1(a);
 
     // query
-    //  m2.query(left,right)   return min of between left and right
+    //  m1.query(left,right)   return min of between left and right
     return 0;
 }
