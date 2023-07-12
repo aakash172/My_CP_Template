@@ -2,7 +2,7 @@
 
 /**
  *           author: aakash_172
- *           created: 2023-07-03    20:49:35    
+ *           created: 2023-07-11    23:44:15 
  **/
 /*----------------------------------------------------------------------------------------------------*/
 /* Header Files -------------------------------------------------------------------------------------*/
@@ -16,6 +16,7 @@ using namespace __gnu_pbds;
 
 #pragma GCC optimize("Ofast,unroll-loops")
 #pragma GCC target("bmi,bmi2,lzcnt,popcnt")
+#pragma GCC optimize("O2")
 #pragma GCC target("avx2,popcnt,lzcnt,abm,bmi,bmi2,fma,tune=native")
 
 /* Most common declaration of container -------------------------------------------------------------*/
@@ -39,18 +40,18 @@ using moset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statisti
 
 #define endl "\n"
 #define fastout                       \
-	ios_base::sync_with_stdio(false); \
-	cin.tie(NULL);                    \
-	cout.tie(NULL)
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL)
 #define maxv(v) *max_element(v.begin(), v.end())
 #define minv(v) *min_element(v.begin(), v.end())
 #define maxa(arr, n) *max_element(arr, arr + (n))
 #define mina(arr, n) *min_element(arr, arr + (n))
 #define FILL(v, n)              \
-	for (int i = 0; i < n; i++) \
-	{                           \
-		cin >> v[i];            \
-	}
+    for (int i = 0; i < n; i++) \
+    {                           \
+        cin >> v[i];            \
+    }
 #define loop(n) for (int(i) = 0; i < (n); i++)
 #define loop1(n) for (int(i) = 1; i <= n; i++)
 #define loops(i, n) for (int(i) = 1; i <= n; i++)
@@ -76,19 +77,48 @@ using moset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statisti
 #define No cout << "No" << endl
 #define no cout << "no" << endl
 #define pria(v, n)              \
-	for (int I = 0; I < n; I++) \
-	cout << (v)[I] << " "
+    for (int I = 0; I < n; I++) \
+    cout << (v)[I] << " "
 #define priv(v)       \
-	for (auto &x : v) \
-	cout << x << " "
+    for (auto &x : v) \
+    cout << x << " "
 #define nl cout << endl
 #define rt return
+
+/*--------------------------------------------------------------------------------------------------*/
+
+template <typename T>
+istream &operator>>(istream &is, vector<T> &v)
+{
+    for (auto &i : v)
+        is >> i;
+    return is;
+}
+template <typename T>
+ostream &operator<<(ostream &os, vector<T> v)
+{
+    for (auto &i : v)
+        os << i << ' ';
+    return os;
+}
+template <typename T, typename U>
+istream &operator>>(istream &is, pair<T, U> &p)
+{
+    is >> p.first >> p.second;
+    return is;
+}
+template <typename T, typename U>
+ostream &operator<<(ostream &os, pair<T, U> p)
+{
+    os << p.first << ' ' << p.second;
+    return os;
+}
 
 /*----------------------------------------------------------------------------------------------------*/
 
 void pr(auto x)
 {
-	cout << x << endl;
+    cout << x << endl;
 }
 
 /*----------------------------------------------------------------------------------------------------
@@ -102,30 +132,26 @@ const int MOD = 1e9 + 7;
 /*Main Code start from here*/
 void solve()
 {
-	ll n;
-	cin >> n;
-
-	//   string s;
-	//   cin>>s;
-	// ll arr[n];
-	//  FILL(arr,n);
+    ll n;
+    cin >> n;
+     
 }
 
 int main()
 {
-	fastout;
-	//   #ifndef ONLINE_JUDGE
-	//     freopen("input.txt", "r" , stdin);
-	//     freopen("output.txt", "w", stdout);
-	//  #endif
-	int TC = 1;
-	cin >> TC;
-	for (int i = 1; i <= TC; i++)
-	{
+    fastout;
+    //   #ifndef ONLINE_JUDGE
+    //     freopen("input.txt", "r" , stdin);
+    //     freopen("output.txt", "w", stdout);
+    //  #endif
+    int TC = 1;
+    cin >> TC;
+    for (int i = 1; i <= TC; i++)
+    {
 
-		// cout<<"Case "<<i<<": ";
+        // cout<<"Case "<<i<<": ";
 
-		solve();
-	}
-	return 0;
+        solve();
+    }
+    return 0;
 }
