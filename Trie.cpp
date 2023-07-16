@@ -22,7 +22,7 @@ public:
     }
 
 //This function return true is s is already present and it insert s in trie
-    bool res(string &s, Trie *&root)
+    bool insert(string &s, Trie *&root)
     {
         Trie *temp = root;
 
@@ -48,6 +48,6 @@ int main()
 {
 
         // Trie *obj=new Trie();  
-        // obj->res(s,obj)
+        // obj->insert(s,obj)
     return 0;
 }
