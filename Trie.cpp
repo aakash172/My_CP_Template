@@ -21,7 +21,7 @@ public:
         end = false;
     }
 
-//This function return true is s is already present and it insert s in trie
+//This function return true if string s is already present and it insert string s in trie
     bool insert(string &s, Trie *&root)
     {
         Trie *temp = root;
