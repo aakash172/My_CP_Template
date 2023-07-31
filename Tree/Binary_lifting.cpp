@@ -103,12 +103,18 @@ void binary_lifting(ll n)
     }
 }
 
+ll dist(ll a, ll b)
+{
+    ll c = lca(a, b);
+    return lev[a] - lev[c] + lev[b] - lev[c];
+}
+
 int main()
 {
 
-    //first run reset(n)
+    // first run reset(n)
 
-    //create adjacency list and call binary_lifting(n)
+    // create adjacency list and call binary_lifting(n)
 
     return 0;
 }
