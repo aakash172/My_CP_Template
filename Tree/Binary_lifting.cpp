@@ -81,13 +81,7 @@ ll lca(ll a, ll b)
 
     return parent[a][0];
 }
-void reset(int n)
-{
-    for (int i = 1; i <= n; i++)
-    {
-        adj[i].clear();
-    }
-}
+
 void binary_lifting(ll n)
 {
     dfs(1, 0, adj);
@@ -109,6 +103,13 @@ ll dist(ll a, ll b)
     return lev[a] - lev[c] + lev[b] - lev[c];
 }
 
+void reset(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        adj[i].clear();
+    }
+}
 int main()
 {
 
