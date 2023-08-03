@@ -21,7 +21,7 @@
 #### LeetCode
 
 - **Username:** aakash_172
-- **Rating:** 2071 (Knight)
+- **Rating:** 2234 (Guardian)
 - **Profile Link:** [Click_here](https://leetcode.com/aakash_172/)
 
 ---
