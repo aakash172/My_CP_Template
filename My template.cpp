@@ -85,6 +85,32 @@ using moset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statisti
 #define nl cout << endl
 #define rt return
 
+/*-------------------------------------ERROR----------------------------------------------------------*/
+
+/* Debugging Only for Local Machine */
+#ifndef ONLINE_JUDGE
+#define debug(x) cerr<<#x<<": "; show(x); cerr<<nl;
+#else 
+#define debug(x)
+#endif
+
+void show(ll t) {cerr << t;}
+void show(int t) {cerr << t;}
+void show(string t) {cerr << t;}
+void show(char t) {cerr << t;}
+void show(double t) {cerr << t;}
+void show(unsigned long long t) {cerr << t;}
+
+template <class T, class V> void show(pair <T, V> p);
+template <class T> void show(vector <T> v);
+template <class T> void show(set <T> v);
+template <class T, class V> void show(map <T, V> v);
+template <class T> void show(multiset <T> v);
+template <class T, class V> void show(pair <T, V> p) {cerr << "{"; show(p.ff); cerr << ","; show(p.ss); cerr << "}";}
+template <class T> void show(vector <T> v) {cerr << "[ "; for (T i : v) {show(i); cerr << " ";} cerr << "]";}
+template <class T> void show(set <T> v) {cerr << "[ "; for (T i : v) {show(i); cerr << " ";} cerr << "]";}
+template <class T> void show(multiset <T> v) {cerr << "[ "; for (T i : v) {show(i); cerr << " ";} cerr << "]";}
+template <class T, class V> void show(map <T, V> v) {cerr << "[ "; for (auto i : v) {show(i); cerr << " ";} cerr << "]";}
 /*--------------------------------------------------------------------------------------------------*/
 
 template <typename T>
