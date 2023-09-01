@@ -7,24 +7,79 @@
 using namespace std;
 #define ll long long
 
-vector<int> nextg(vector<int> &nums)
-{
-    int n = nums.size();
-    vector<int> ans(n, -1);
-    stack<int> st;
-
-    for (int i = n - 1; i >= 0; i--)
+    vector<int> nextg(vector<int> &nums)
     {
-        while (!st.empty() && nums[st.top()] <= nums[i])
+        int n = nums.size();
+        vector<int> ans(n, n);
+        stack<int> st;
+
+        for (int i = n - 1; i >= 0; i--)
         {
-            st.pop();
+            while (!st.empty() && nums[st.top()] <= nums[i])
+            {
+                st.pop();
+            }
+            if (!st.empty())
+                ans[i] = st.top();
+            st.push(i);
         }
-        if (!st.empty())
-            ans[i] = st.top();
-        st.push(i);
+        return ans;
     }
-    return ans;
-}
+    vector<int> pg(vector<int> &nums)
+    {
+        int n = nums.size();
+        vector<int> ans(n, -1);
+        stack<int> st;
+
+        for (int i = 0; i < n; i++)
+        {
+            while (!st.empty() && nums[st.top()] <= nums[i])
+            {
+                st.pop();
+            }
+            if (!st.empty())
+                ans[i] = st.top();
+            st.push(i);
+        }
+        return ans;
+    }
+
+    vector<int> nexts(vector<int> &nums)
+    {
+        int n = nums.size();
+        vector<int> ans(n, n);
+        stack<int> st;
+
+        for (int i = n - 1; i >= 0; i--)
+        {
+            while (!st.empty() && nums[st.top()] >= nums[i])
+            {
+                st.pop();
+            }
+            if (!st.empty())
+                ans[i] = st.top();
+            st.push(i);
+        }
+        return ans;
+    }
+    vector<int> ps(vector<int> &nums)
+    {
+        int n = nums.size();
+        vector<int> ans(n, -1);
+        stack<int> st;
+
+        for (int i = 0; i < n; i++)
+        {
+            while (!st.empty() && nums[st.top()] >= nums[i])
+            {
+                st.pop();
+            }
+            if (!st.empty())
+                ans[i] = st.top();
+            st.push(i);
+        }
+        return ans;
+    }
 
 int main()
 {

@@ -1,5 +1,3 @@
-
-
 /**
  *           author: aakash_172
  *           created: 2023-07-11    23:44:15
@@ -92,7 +90,7 @@ using moset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statisti
 #define debug(x)        \
     cerr << #x << ": "; \
     show(x);            \
-    cerr << nl;
+    cerr << endl;
 #else
 #define debug(x)
 #endif
@@ -204,7 +202,6 @@ ostream &operator<<(ostream &os, pair<T, U> p)
 void pr(auto x)
 {
     cout << x << endl;
-    rt;
 }
 
 /*----------------------------------------------------------------------------------------------------
