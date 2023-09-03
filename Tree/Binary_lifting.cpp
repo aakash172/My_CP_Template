@@ -108,6 +108,11 @@ void reset(int n)
     for (int i = 1; i <= n; i++)
     {
         adj[i].clear();
+        lev[i] = 0;
+        for (int j = 0; j <= mbit; j++)
+        {
+            parent[i][j] = 0;
+        }
     }
 }
 int main()
