@@ -14,8 +14,8 @@ void sieve()
     {
         if (prime[i] == 0)
         {
-            prime[i] = i;
-            for (ll j = i * i; j <= maxRange; j += i)
+
+            for (ll j = i; j <= maxRange; j += i)
             {
                 if (prime[j] == 0)
                 {
