@@ -23,7 +23,7 @@ void dfs(ll sr, ll pr, vector<ll> adj[])
     }
 }
 
-void dfs_cycle(int sr, int p, vector<ll> color, vector<ll> par, vector<vector<ll>> &cycles)
+void dfs_cycle(int sr, int p, vector<ll> &color, vector<ll> &par, vector<vector<ll>> &cycles)
 {
 
     if (color[sr] == 2)
