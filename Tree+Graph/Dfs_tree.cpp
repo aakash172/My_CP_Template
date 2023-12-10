@@ -9,7 +9,7 @@ void dfs(ll sr, vector<ll> adj[], ll par)
     {
         if (x == par)
             continue;
-        dfs(sr, adj, par);
+        dfs(x, adj, sr);
     }
 }
 

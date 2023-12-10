@@ -3,14 +3,16 @@
 using namespace std;
 #define ll long long
 
-void dfs(ll sr, vector<ll> adj[], vector<ll> &vis)
+void dfs(ll sr, ll pr, vector<ll> adj[], vector<ll> &lev)
 {
-    vis[sr] = true;
-    for (auto &x : adj[sr])
+
+    for (auto x : adj[sr])
     {
-        if (vis[x])
+        if (x == pr)
             continue;
-        dfs(sr, adj, vis);
+
+        lev[x] = lev[sr] + 1;
+        dfs(x, sr, adj, lev);
     }
 }
 
