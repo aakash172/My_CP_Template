@@ -10,7 +10,7 @@ ll lev[N];
 ll parent[N][mbit + 1];
 vector<ll> adj[N];
 
-void dfs(ll sr, ll pr, vector<ll> adj[])
+void dfs(ll sr, ll pr)
 {
 
     for (auto x : adj[sr])
@@ -19,7 +19,7 @@ void dfs(ll sr, ll pr, vector<ll> adj[])
             continue;
         parent[x][0] = sr;
         lev[x] = lev[sr] + 1;
-        dfs(x, sr, adj);
+        dfs(x, sr);
     }
 }
 
@@ -124,7 +124,7 @@ ll lca(ll a, ll b)
 
 void binary_lifting(ll n)
 {
-    dfs(1, 0, adj);
+    dfs(1, 0);
     for (int i = 1; i <= mbit; i++)
     {
         for (int j = 1; j <= n; j++)
