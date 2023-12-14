@@ -20,7 +20,7 @@ public:
     void add(int index, T val)
     {
         val[index] += val;
-        for (; index < n index += (index & (-index)))
+        for (; index < n; index += (index & (-index)))
         {
             arr[index] += val;
         }
