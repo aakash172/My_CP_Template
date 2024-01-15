@@ -17,12 +17,12 @@ public:
         val.resize(n);
     }
 
-    void add(int index, T val)
+    void add(int index, T value)
     {
-        val[index] += val;
+        val[index] += value;
         for (; index < n; index += (index & (-index)))
         {
-            arr[index] += val;
+            arr[index] += value;
         }
     }
 
@@ -53,7 +53,6 @@ public:
         return (sum2 - sum1);
     }
 };
-
 int main()
 {
 
