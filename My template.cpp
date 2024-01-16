@@ -22,6 +22,8 @@ typedef long long       ll;
 typedef pair<ll, ll>    pll;
 typedef vector<ll>      vl;
 typedef vector<vl>      vvl;
+typedef vector<bool>    vb;
+typedef vector<vb>      vvb;
 typedef vector<pll>     vpll;
 typedef map<ll, ll>     mll;
 typedef map<char, ll>   mcl;
